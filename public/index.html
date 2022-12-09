@@ -1,15 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/public/css/tailwind.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>My Travel Page</title>
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+<body class="font-Montserrat dark:bg-gray-900">
+    <nav class="hidden z-10 bg-white sticky left-0 top-0 w-full h-18 px-8 py-4 lg:flex items-center justify-between dark:bg-gray-800">
+            <div>
+                <h1 class="text-xl font-black text-primary dark:text-white">My travels</h1>
+            </div>
+            <div class="flex space-x-8">
+                <a class="font-bold text-md text-primary dark:text-white" href="#home">Recommended</a>
+                <a class="font-bold text-md text-primary dark:text-white" href="#trending">Trending</a>
+                <a class="font-bold text-md text-primary dark:text-white" href="#questions">FAQs</a>
+                <a class="font-bold text-md text-primary dark:text-white" href="#about_me">About me</a>
+            </div>
+            <div class="flex space-x-8 items-center justify-center">
+                <a href="#search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#631D76" class="w-8 h-8 dark:fill-white">
+                        <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <button id="darkMode">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#631D76" class="w-8 h-8 dark:fill-black">
+                        <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    <header>
+        <section class="bg-[url('/public/images/colombia_paraplane.jpg')] w-full h-full bg-center bg-no-repeat bg-cover flex flex-col justify-center">
+            <input id="search" class="outline-none p-3 rounded-full shadow-sm mt-8 mx-auto w-4/5 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden" type="search" placeholder="Colombia">
+            <div class="hidden lg:flex space-x-4 mt-56 mx-32">
+                <h1 class="text-3xl font-black text-primary dark:text-gray-900">Travel with me</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#631D76" class="w-6 h-6 self-center dark:fill-gray-900">
+                    <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
+                </svg>
+            </div>
+            <button class="mt-80 mb-8 mx-auto text-lg font-semibold p-3 w-52 rounded-full text-primary bg-white shadow-sm hover:bg-primary hover:text-white lg:mx-32 lg:mt-8 lg:mb-56 dark:text-gray-900 dark:hover:bg-gray-900 dark:hover:text-white">Explore more</button>
+        </section>
+    </header>
+    <main id="home">
+        <section class="p-5 lg:p-8">
+            <h1 class="text-3xl font-semibold text-primary my-4 dark:text-white">My recomendations</h1>
+            <div class="w-auto h-72 items-center overflow-x-auto overscroll-x-contain flex space-x-4 lg:h-80 lg:space-x-8 lg:justify-center">
+                <div class="Card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-[url('/public/images/Katherinsburg.jpg')] bg-cover bg-center bg-no-repeat"></div>
+                    <div class="bg-tertiary w-full h-2/5 px-4 rounded-b-lg dark:bg-gray-700">
+                        <p class="text-white text-xl font-bold py-1">Yekaterinburg</p>
+                        <p class="text-white leading-tight">Beautiful and diverse architecture</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-[url('/public/images/Tumen.jpg')] bg-cover bg-center bg-no-repeat"></div>
+                    <div class="bg-white w-full h-2/5 px-4 rounded-b-lg dark:bg-gray-800">
+                        <p class="text-tertiary text-xl font-bold py-1 dark:text-white">Tyumen</p>
+                        <p class="text-tertiary leading-tight dark:text-white">Stunning Siberian landscapes</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-[url('/public/images/Sochi.jpg')] bg-cover bg-center bg-no-repeat"></div>
+                    <div class="bg-tertiary w-full h-2/5 px-4 rounded-b-lg dark:bg-gray-700">
+                        <p class="text-white text-xl font-bold py-1">Sochi</p>
+                        <p class="text-white leading-tight">Best combination: sea and mountains</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-[url('/public/images/Smila.jpg')] bg-cover bg-center bg-no-repeat"></div>
+                    <div class="bg-white w-full h-2/5 px-4 rounded-b-lg dark:bg-gray-800">
+                        <p class="text-tertiary text-xl font-bold py-1 dark:text-white">Smila</p>
+                        <p class="text-tertiary leading-tight dark:text-white">Rest from busy life</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="w-full h-3/5 rounded-t-lg bg-[url('/public/images/Botanic_garden.jpg')] bg-cover bg-center bg-no-repeat"></div>
+                    <div class="bg-tertiary w-full h-2/5 px-4 rounded-b-lg dark:bg-gray-700">
+                        <p class="text-white text-xl font-bold py-1">Botanic garden, Bogotá</p>
+                        <p class="text-white leading-tight">Walk in the magical forest</p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <section id="trending" class="p-5 lg:pt-0 lg:pb-8 lg:px-8">
+            <h1 class="text-3xl font-semibold text-primary mt-4 mb-8 dark:text-white">Trending Destinations</h1>
+            <div class="w-full h-full grid gap-5 lg:grid-cols-5 lg:grid-rows-4 lg:h-[68rem]">
+                <div class="w-full h-96 bg-[url('/public/images/Villa_de_Leiva.jpeg')] bg-cover bg-center bg-no-repeat rounded-xl lg:row-start-1 lg:row-end-3 lg:col-span-5 lg:h-auto">
+                    <p class="CardTitle text-white pt-60 lg:pt-96">Villa de Leyva</p>
+                    <p class="text-md pl-8 text-secondary mr-20 lg:text-lg lg:max-w-[26rem] lg:px-14">Enjoy tranquil atmosphere and beautiful colonial architecture</p>
+                </div>
+                <div class="w-full h-96 bg-[url('/public/images/Kiiv.jpg')] bg-cover bg-center bg-no-repeat rounded-xl lg:row-start-3 lg:row-end-5 lg:col-span-2 lg:h-auto lg:bg-[url('/public/images/Kiiv-big.jpg')]">
+                    <p class="CardTitle text-white pt-60 lg:pt-80">Kiiv</p>
+                    <p class="text-md pl-8 text-secondary mr-20 lg:text-lg lg:max-w-[26rem] lg:px-14">Feel the beat of the heart of Ukraine and discover its' best cuisine</p>
+                </div>
+                <div class="w-full h-96 bg-[url('/public/images/Saint_Petersburg2.jpg')] bg-cover bg-center bg-no-repeat rounded-xl lg:text-right lg:row-start-3 lg:col-start-3 lg:row-span-1 lg:col-span-3 lg:h-auto ">
+                    <p class="CardTitle text-white pt-64 lg:pt-44 lg:mr-20">Saint Petersburg</p>
+                    <p class="text-md pl-8 text-secondary mr-20 lg:text-lg lg:mr-32">Fall in love with the city of history and art</p>
+                </div>
+                <div class="w-full h-96 bg-[url('/public/images/Moscow.jpg')] bg-cover bg-center bg-no-repeat rounded-xl lg:text-right lg:row-start-4 lg:col-start-3 lg:row-span-1 lg:col-span-3 lg:h-auto lg:bg-[url('/public/images/Moscow-big.jpg')]">
+                    <p class="CardTitle text-white pt-64 lg:pt-40 lg:mr-4">Moscow</p>
+                    <p class="text-md pl-8 text-secondary mr-20 lg:text-lg lg:mr-16">Explore Russia's lively and historic capital</p>
+                </div>
+            </div>
+        </section>
+        <section id="questions" class="p-5 flex flex-col space-y-6 lg:pt-0 lg:pb-8 lg:px-8 dark:text-white">
+            <h1 class="text-3xl font-semibold text-primary my-4 dark:text-white">FAQs to me</h1>
+            <div>
+                <p class="text-xl font-medium text-primary dark:text-white">How do you like Colombia?</p>
+                <p class="text-medium pt-2">It's a beatiful country, I love the nature, it feels as if you're surrounded by mountains. By now the best views I've seen were in the department of Boyaca. Of course, I plan to see much more of this country. Oh, also the tropical fruits are delicious.</p>
+            </div>
+            <div>
+                <p class="text-xl font-medium text-primary dark:text-white">Is it cold in Russia?</p>
+                <p class="text-medium pt-2">Depends on the season and the climatic zone you're at. I lived for a long time in Siberia and surely the winters there are cold. At the same time they are incredibly beautiful and I miss them a lot. And in the hot zone in summer it can reach +40 and more. It's all relative.</p>
+            </div>
+            <div>
+                <p class="text-xl font-medium text-primary dark:text-white">What are the best dishes to eat in Ukraine?</p>
+                <p class="text-medium pt-2">Borsch. Salo. Sirniki. And much more. Go around its' capital, visit the restaurants of local cuisine. Believe me, you won't regret it.</p>
+            </div>
+        </section>
+    </main>
+    <footer id="about_me" class="bg-secondary p-8 flex flex-col space-y-4 mt-4">
+        <h1 class="text-lg text-tertiary">About me</h1>
+        <a href="" class="text-gray-500 hover:text-tertiary">My page</a>
+        <a href="" class="text-gray-500 hover:text-tertiary">My LinkedIn profile</a>
+        <a href="" class="text-gray-500 hover:text-tertiary">My resume</a>
+    </footer>
+    <div class="w-full h-16 bg-white sticky left-0 bottom-0 shadow-md flex space-x-8 items-center justify-center lg:hidden dark:bg-gray-800">
+        <a href="#home">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#631D76" class="w-8 h-8 dark:fill-white">
+                <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+            </svg>
+        </a>
+        <a href="#search">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#631D76" class="w-8 h-8 dark:fill-white">
+                <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
+            </svg>
+        </a>
+        <button id="darkModeMobile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#631D76" class="w-8 h-8 dark:fill-black">
+                <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+            </svg>
+        </button>
+        <a href="#about_me">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#631D76" class="w-8 h-8 dark:fill-white">
+                <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+            </svg>
+        </a>
+    </div>
+    <script>
+        const htmlEl = document.querySelector("html")
+        const moonButton = document.querySelector("#darkMode")
+        const moonMobile = document.querySelector("#darkModeMobile")
+        
+        moonButton.addEventListener("click", () => {
+            htmlEl.classList.toggle("dark");
+        })
+        moonMobile.addEventListener("click", () => {
+            htmlEl.classList.toggle("dark");
+        })
+    </script>
 </body>
 </html>
